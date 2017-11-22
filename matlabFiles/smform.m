@@ -78,7 +78,7 @@ end
 %g=factor(g);
 P=d*g;
 S=maple('smith',P,p);
-M=simple(S/d);
+M=simplify(S/d);
 
 %****************************************************************
 % Determines the poles and zeros

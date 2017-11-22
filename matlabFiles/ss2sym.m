@@ -34,5 +34,5 @@ p=sym('p');
 if n~=m
     error('El sistema debe ser cuadrado')
 end
-g=simple(c*inv(p*eye(n) - a)*b +d);
+g=simplify(c*inv(p*eye(n) - a)*b +d);
 %------------- END OF CODE --------------

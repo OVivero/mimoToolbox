@@ -51,5 +51,5 @@ for i=1:n
     end
 end
 
-g=simple(g);
+g=simplify(g);
 %------------- END OF CODE --------------

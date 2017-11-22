@@ -90,10 +90,10 @@ end
 A=subs(A,complex(0,w));
 
 if isa(A,'sym')==true
-    A=simple(subs(A,complex(0,w)));
+    A=simplify(subs(A,complex(0,w)));
 end
 
 if no==2
-    cond=simple(sum(sum(abs(A))));
+    cond=simplify(sum(sum(abs(A))));
 end
 %------------- END OF CODE --------------
