@@ -28,7 +28,7 @@ function [M,poles,zeros] = smform(a,b,c,d)
 % Author: Oskar Vivero Osornio
 % email: oskar.vivero@gmail.com
 % Created: February 2006; 
-% Last revision: 25-March-2006;
+% Last revision: 13-Dec-2017;
 
 % May be distributed freely for non-commercial use, 
 % but please leave the above info unchanged, for
@@ -66,7 +66,8 @@ while (length(d))>1
     k=1;
     d1=sym([]);
      for i=2:length(d)
-     d1(k)=lcm(factor(d(i)),factor(d(i-1)));
+%     d1(k)=lcm(factor(d(i)),factor(d(i-1)));
+     d1(k)=lcm(d(i),d(i-1));
      k=k+1;
      end
 d=d1;
@@ -75,9 +76,8 @@ end
 
 %****************************************************************
 % Determines P, S, and finally M
-%g=factor(g);
 P=d*g;
-S=maple('smith',P,p);
+S=smithForm(P);
 M=simplify(S/d);
 
 %****************************************************************
