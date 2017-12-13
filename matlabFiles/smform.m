@@ -23,7 +23,6 @@ function [M,poles,zeros] = smform(a,b,c,d)
 %
 % Other m-files required: tf2sym, ss2sym
 % Subfunctions: multiplica
-% Active Link required: Maple
 %
 % Author: Oskar Vivero Osornio
 % email: oskar.vivero@gmail.com
