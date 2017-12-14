@@ -75,7 +75,7 @@ end
 
 %****************************************************************
 % Determines P, S, and finally M
-P=d*g;
+P=simplify(d*g);
 S=smithForm(P);
 M=simplify(S/d);
 
